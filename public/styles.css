@@ -1,0 +1,147 @@
+:root {
+  --bg-dark: #070707;
+  --font-color: #b8b8b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+picture {
+  height: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  color: var(--font-color);
+}
+
+body {
+  background-color: var(--bg-dark);
+}
+
+.header {
+  background-image: url('./assets/images/rice_800.jpg');
+  background-size: cover;
+  background-position: left;
+  height: 40vh;
+  padding: 1.6rem;
+  opacity: .8;
+}
+
+.header .logo-container {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+
+.logo-container img {
+  border-radius: 50%;
+}
+
+#root {
+  padding: 1.6rem;
+}
+
+.card a {
+  font-size: 1.6rem;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  margin-block-end: .8rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+.card .food-container {
+	width: 100%;
+	max-width: 200px;
+	margin-block: 1.6rem;
+}
+
+.card :is(.food-description, .food-price) {
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  overflow-wrap: break-word;
+  margin-block-end: .8rem;
+}
+
+.card .food-name {
+  color: #fff;
+  font-size: 2.4rem;
+  margin-block-end: .8rem;
+}
+
+.card .food-packContent {
+  font-size: 1.6rem;
+  margin-block-end: .8rem;
+}
+
+.button {
+  border: none;
+}
+
+.food-price .order {
+  background-color: #fff;
+  border-radius: 25px;
+  width: 100%;
+  color: #000;
+  font-weight: bold;
+  padding: 1.6rem;
+}
+
+.card .line {
+  border-block-end: 3px dotted #fff;
+  width: 100%;
+  height: 3px;
+  display: none;
+  margin-block: 1.6rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  .card {
+    flex-direction: revert;
+  }
+
+  .card .food-container {
+    width: 400px;
+    margin-block: 1.6rem;
+  }
+
+  .card :is(.food-description, .food-price) {
+    margin-inline: 1.6rem;
+  }
+
+  .card .food-name {
+    font-size: 1.8rem;
+  }
+
+  .card .food-price {
+    height: 100px;
+  }
+
+  .card .food-packContent {
+    font-size: 1.6rem;
+  }
+
+  .card .line {
+    display: block;
+  }
+
+}
