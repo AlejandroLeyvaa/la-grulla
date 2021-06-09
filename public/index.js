@@ -12,3 +12,5 @@ window.addEventListener('load', async () => {
 window.addEventListener('hashchange', async () => {
   init();
 });
+
+console.log('Hello world')
